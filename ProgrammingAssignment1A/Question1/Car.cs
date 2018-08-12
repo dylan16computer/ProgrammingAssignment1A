@@ -15,25 +15,25 @@ namespace Question1
         {
             return colour;
         }
-        public void SetColour(string value)
+        public void SetColour(string col)
         {
-            colour = value;
+            colour = col;
         }
         public string GetMake()
         {
             return make;
         }
-        public void SetMake(string value)
+        public void SetMake(string mk)
         {
-            make = value;
+            make = mk;
         }
         public string GetGearbox()
         {
             return gearbox;
         }
-        public void SetGearbox(string value)
+        public void SetGearbox(string gbox)
         {
-            gearbox = value;
+            gearbox = gbox;
         }
     }
 }
