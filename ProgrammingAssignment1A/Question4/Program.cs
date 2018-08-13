@@ -8,6 +8,7 @@ namespace Question4
 {
     class Program
     {
+        static int i = 0;
         static void Main(string[] args)
         {
             var personList = new List<Person>();
@@ -24,17 +25,22 @@ namespace Question4
                 //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console --//
                 Environment.Exit(0);
             }
+            else
+            {
+                Console.WriteLine("Invalid input");
+            }
 
             void NewPerson()
             {
+                i += 1;
                 Console.WriteLine("Enter your first name: ");
                 string firstName = Console.ReadLine();
                 Console.WriteLine("Enter your last name: ");
                 string lastName = Console.ReadLine();
-                personList.Add(person = new Person(firstName, lastName));
                 Console.WriteLine("Enter your year of birth: ");
-                personCounter.YearOfBirth = int.Parse(Console.ReadLine());
-                Console.WriteLine($"Full Name: {personCounter.GetFullName()}\nAge: {personCounter.GetAge()}");
+                int YOB = int.Parse(Console.ReadLine());
+                personList.Add(new Person(firstName, lastName));
+                Console.WriteLine($"Full Name: {.GetFullName()}\nAge: {.GetAge()}");
             }
         }
     }

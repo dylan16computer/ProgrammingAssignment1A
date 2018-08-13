@@ -17,7 +17,7 @@ namespace Question4
         }
         public int GetAge()
         {
-            return 2018 - YearOfBirth;
+            return DateTime.Now.Year - YearOfBirth;
         }
         public Person(string firstName, string lastName)
         {
