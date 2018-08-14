@@ -12,14 +12,14 @@ namespace Question4
         {
             int i = -1;
             var personList = new List<Person>();
-            char decide = char.Parse("y"); //should decide be a char or string?
-            while (decide == char.Parse("y"))
+            string decide = "y"; //should decide be a char or string?
+            while (decide == "y")
             {
                 NewPerson();
                 Console.WriteLine("\nWould you like to add another person? y for yes, n for no.");
-                decide = char.Parse(Console.ReadLine());
+                decide = Console.ReadLine();
             }
-            if (decide == char.Parse("n"))
+            if (decide == "n")
             {
                 Console.WriteLine("Exiting program...");
                 //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically

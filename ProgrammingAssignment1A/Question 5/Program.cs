@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Question4;
 
-namespace Question_5
+namespace Question5
 {
     class Program
     {
@@ -18,9 +19,6 @@ namespace Question_5
             Console.WriteLine("Enter campus: ");
             string campus = Console.ReadLine();
             Student student1 = new Student(firstName, lastName, campus);
-            Console.WriteLine("Creating new person record...");
-            Console.WriteLine($"\nAdding new student record to {student1.Campus} campus...");
-            Console.WriteLine($"{student1.}");
         }
     }
 }
