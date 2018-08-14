@@ -19,6 +19,7 @@ namespace Question5
             Console.WriteLine("Enter campus: ");
             string campus = Console.ReadLine();
             Student student1 = new Student(firstName, lastName, campus);
+            Console.WriteLine($"{student1.}");
         }
     }
 }
