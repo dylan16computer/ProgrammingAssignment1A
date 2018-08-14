@@ -8,21 +8,23 @@ namespace Question4
 {
     class Program
     {
-        static int i = -1;
         static void Main(string[] args)
         {
+            int i = -1;
             var personList = new List<Person>();
-            string decide;
-            do
+            char decide = char.Parse("y"); //should decide be a char or string?
+            while (decide == char.Parse("y"))
             {
                 NewPerson();
-                Console.WriteLine("Would you like to add another person? y for yes, n for no.");
-                decide = Console.ReadLine();
-            } while (decide == "y");
-            if (decide == "n")
+                Console.WriteLine("\nWould you like to add another person? y for yes, n for no.");
+                decide = char.Parse(Console.ReadLine());
+            }
+            if (decide == char.Parse("n"))
             {
                 Console.WriteLine("Exiting program...");
-                //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console --//
+                //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
+                System.Threading.Thread.Sleep(1000);
+                //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console
                 Environment.Exit(0);
             }
             else
@@ -32,15 +34,15 @@ namespace Question4
 
             void NewPerson()
             {
+                i += 1;
                 Console.WriteLine("Enter your first name: ");
                 string firstName = Console.ReadLine();
                 Console.WriteLine("Enter your last name: ");
                 string lastName = Console.ReadLine();
-                Console.WriteLine("Enter your year of birth: ");
                 personList.Add(new Person(firstName, lastName));
-                i += 1;
+                Console.WriteLine("Enter your year of birth: ");
                 personList[i].YearOfBirth = int.Parse(Console.ReadLine());
-                Console.WriteLine($"Full Name: {personList[i].GetFullName()}\nAge: {personList[i].GetAge()}");
+                Console.WriteLine($"--- Person Record ---\nFull Name: {personList[i].GetFullName()}\nAge: {personList[i].GetAge()}");
             }
         }
     }
