@@ -8,7 +8,7 @@ namespace Question4
 {
     class Program
     {
-        static int i = 0;
+        static int i = -1;
         static void Main(string[] args)
         {
             var personList = new List<Person>();
@@ -32,15 +32,19 @@ namespace Question4
 
             void NewPerson()
             {
-                i += 1;
+                //Console.WriteLine("Enter name of instance: ");
+                //string intance = Console.ReadLine();
                 Console.WriteLine("Enter your first name: ");
                 string firstName = Console.ReadLine();
                 Console.WriteLine("Enter your last name: ");
                 string lastName = Console.ReadLine();
                 Console.WriteLine("Enter your year of birth: ");
-                int YOB = int.Parse(Console.ReadLine());
+                int YearOfBirth = int.Parse(Console.ReadLine());
                 personList.Add(new Person(firstName, lastName));
-                Console.WriteLine($"Full Name: {.GetFullName()}\nAge: {.GetAge()}");
+                //Console.WriteLine(personList.Count);
+                i += 1;
+                Console.WriteLine($"Full Name: {personList[i].GetFullName()}\n{personList[i].YearOfBirth}");
+                //Console.WriteLine(DateTime.Now.Year);
             }
         }
     }
