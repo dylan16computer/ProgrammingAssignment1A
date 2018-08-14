@@ -32,19 +32,15 @@ namespace Question4
 
             void NewPerson()
             {
-                //Console.WriteLine("Enter name of instance: ");
-                //string intance = Console.ReadLine();
                 Console.WriteLine("Enter your first name: ");
                 string firstName = Console.ReadLine();
                 Console.WriteLine("Enter your last name: ");
                 string lastName = Console.ReadLine();
                 Console.WriteLine("Enter your year of birth: ");
-                int YearOfBirth = int.Parse(Console.ReadLine());
                 personList.Add(new Person(firstName, lastName));
-                //Console.WriteLine(personList.Count);
                 i += 1;
-                Console.WriteLine($"Full Name: {personList[i].GetFullName()}\n{personList[i].YearOfBirth}");
-                //Console.WriteLine(DateTime.Now.Year);
+                personList[i].YearOfBirth = int.Parse(Console.ReadLine());
+                Console.WriteLine($"Full Name: {personList[i].GetFullName()}\nAge: {personList[i].GetAge()}");
             }
         }
     }
