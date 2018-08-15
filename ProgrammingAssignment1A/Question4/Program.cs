@@ -12,7 +12,7 @@ namespace Question4
         {
             int i = -1;
             var personList = new List<Person>();
-            string decide = "y"; //should decide be a char or string?
+            string decide = "y";
             while (decide == "y")
             {
                 NewPerson();
@@ -32,7 +32,7 @@ namespace Question4
                 Console.WriteLine("Invalid input");
             }
 
-            void NewPerson()
+            void NewPerson()//try a while loop instead.
             {
                 i += 1;
                 Console.WriteLine("Enter your first name: ");

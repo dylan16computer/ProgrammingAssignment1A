@@ -44,6 +44,11 @@ namespace MainMenu
                     }
                     Console.WriteLine("Enter y to go back to the main menu, enter any key to exit program");
                     choice = Console.ReadLine();
+                    if (choice != "y")
+                    {
+                        //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console
+                        Environment.Exit(0);
+                    }
                 } while (choice == "y");
             }
         }
