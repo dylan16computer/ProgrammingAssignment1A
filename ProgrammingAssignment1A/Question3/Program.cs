@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Question3
 {
-    class ProgramQ3
+    public class ProgramQ3
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Car car1 = new Car();
             Console.WriteLine("Enter your car colour: ");

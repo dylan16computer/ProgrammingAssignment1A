@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Question4
 {
-    class Program
+    public class ProgramQ4
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             int i = -1;
             var personList = new List<Person>();

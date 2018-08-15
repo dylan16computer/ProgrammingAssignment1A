@@ -15,7 +15,8 @@ namespace Question5
         {
             Random randint = new Random();
             //-- https://stackoverflow.com/questions/3975290/produce-a-random-number-in-a-range-using-c-sharp --//
-            return randint.Next(0000, 9999);
+            StudentID = randint.Next(0000, 9999);
+            return StudentID;
         }
         public Student(string firstName, string lastName, string campus) : base(firstName, lastName)
         {

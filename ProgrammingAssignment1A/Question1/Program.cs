@@ -8,7 +8,7 @@ namespace Question1
 {
     public class ProgramQ1
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Car car1 = new Car();
             Console.WriteLine("Enter your car colour: ");

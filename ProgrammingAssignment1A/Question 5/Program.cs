@@ -7,9 +7,9 @@ using Question4;
 
 namespace Question5
 {
-    class Program
+    public class ProgramQ5
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("Enter name of new student below: ");
             Console.WriteLine("Enter first name: ");
@@ -19,7 +19,9 @@ namespace Question5
             Console.WriteLine("Enter campus: ");
             string campus = Console.ReadLine();
             Student student1 = new Student(firstName, lastName, campus);
-            Console.WriteLine($"{student1.}");
+            Console.WriteLine("Creating new person record...");
+            Console.WriteLine($"Adding new student record to {student1.Campus} campus...");
+            Console.WriteLine($"{student1.FirstName} {student1.LastName} of {student1.Campus} campus has a Student ID of {student1.EnrollStudent()}");
         }
     }
 }

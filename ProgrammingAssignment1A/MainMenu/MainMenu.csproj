@@ -49,9 +49,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Question 5\Question 5.csproj">
+      <Project>{30118e9a-68ee-4998-894a-193cecffebab}</Project>
+      <Name>Question 5</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Question1\Question1.csproj">
       <Project>{cc627ebe-8738-4b05-a64c-2d1d26994208}</Project>
       <Name>Question1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Question3\Question3.csproj">
+      <Project>{aa9ff18f-9717-4fef-84f8-67a612b3b086}</Project>
+      <Name>Question3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Question4\Question4.csproj">
+      <Project>{c5ace44d-139c-488a-b523-9781d2690ad2}</Project>
+      <Name>Question4</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
