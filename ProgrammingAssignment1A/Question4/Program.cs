@@ -15,25 +15,6 @@ namespace Question4
             string decide = "y";
             while (decide == "y")
             {
-                NewPerson();
-                Console.WriteLine("\nWould you like to add another person? y for yes, n for no.");
-                decide = Console.ReadLine();
-            }
-            if (decide == "n")
-            {
-                Console.WriteLine("Exiting program...");
-                //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
-                System.Threading.Thread.Sleep(1000);
-                //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console
-                Environment.Exit(0);
-            }
-            else
-            {
-                Console.WriteLine("Invalid input");
-            }
-
-            void NewPerson()//try a while loop instead.
-            {
                 i += 1;
                 Console.WriteLine("Enter your first name: ");
                 string firstName = Console.ReadLine();
@@ -43,6 +24,29 @@ namespace Question4
                 Console.WriteLine("Enter your year of birth: ");
                 personList[i].YearOfBirth = int.Parse(Console.ReadLine());
                 Console.WriteLine($"--- Person Record ---\nFull Name: {personList[i].GetFullName()}\nAge: {personList[i].GetAge()}");
+                Console.WriteLine("\nWould you like to add another person? y for yes, n for no.");
+                decide = Console.ReadLine();
+                if (decide == "n")
+                {
+                    Console.WriteLine("Exiting program...");
+                    //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
+                    System.Threading.Thread.Sleep(1000);
+                    //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console
+                    Environment.Exit(0);
+                }
+                while(decide != "y")
+                {
+                    Console.WriteLine("Invalid input. Please enter y to continue program, enter n to close program.");
+                    decide = Console.ReadLine();
+                    if(decide == "n")
+                    {
+                        Console.WriteLine("Exiting program...");
+                        //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
+                        System.Threading.Thread.Sleep(1000);
+                        //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console
+                        Environment.Exit(0);
+                    }
+                }
             }
         }
     }
