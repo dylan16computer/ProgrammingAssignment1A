@@ -20,31 +20,30 @@ namespace Question4
                 string firstName = Console.ReadLine();
                 Console.WriteLine("Enter your last name: ");
                 string lastName = Console.ReadLine();
+                Console.WriteLine("\nCreating new person record...");
+                //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
+                System.Threading.Thread.Sleep(1000);
                 personList.Add(new Person(firstName, lastName));
-                Console.WriteLine("Enter your year of birth: ");
+                Console.WriteLine("\nEnter your year of birth: ");
                 personList[i].YearOfBirth = int.Parse(Console.ReadLine());
-                Console.WriteLine($"--- Person Record ---\nFull Name: {personList[i].GetFullName()}\nAge: {personList[i].GetAge()}");
+                Console.WriteLine($"\n--- Person Record ---\nFull Name: {personList[i].GetFullName()}\nAge: {personList[i].GetAge()}");
                 Console.WriteLine("\nWould you like to add another person? y for yes, n for no.");
                 decide = Console.ReadLine();
                 if (decide == "n")
                 {
-                    Console.WriteLine("Exiting program...");
-                    //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
-                    System.Threading.Thread.Sleep(1000);
-                    //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console
-                    Environment.Exit(0);
+                    Console.WriteLine("Returning to Main Menu...");
+                    return;
                 }
                 while(decide != "y")
                 {
-                    Console.WriteLine("Invalid input. Please enter y to continue program, enter n to close program.");
+                    Console.WriteLine("Invalid input. Please enter y to continue program, enter n to return to Main Menu.");
                     decide = Console.ReadLine();
                     if(decide == "n")
                     {
-                        Console.WriteLine("Exiting program...");
+                        Console.WriteLine("Returning to Main Menu...");
                         //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
                         System.Threading.Thread.Sleep(1000);
-                        //-- https://stackoverflow.com/questions/5682408/command-to-close-an-application-of-console
-                        Environment.Exit(0);
+                        return;
                     }
                 }
             }

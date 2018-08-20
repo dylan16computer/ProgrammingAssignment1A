@@ -18,6 +18,9 @@ namespace Question1
             Console.WriteLine("Enter your gearbox type: ");
             car1.SetGearbox(Console.ReadLine());
             Console.WriteLine($"Your car colour is a {car1.GetColour()} {car1.GetMake()} with a {car1.GetGearbox()} transmission");
+            Console.WriteLine("Press any key to return to Main Menu");
+            Console.ReadKey();
+            return;
         }
     }
 }

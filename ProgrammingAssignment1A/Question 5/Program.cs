@@ -19,9 +19,16 @@ namespace Question5
             Console.WriteLine("Enter campus: ");
             string campus = Console.ReadLine();
             Student student1 = new Student(firstName, lastName, campus);
-            Console.WriteLine("Creating new person record...");
-            Console.WriteLine($"Adding new student record to {student1.Campus} campus...");
-            Console.WriteLine($"{student1.FirstName} {student1.LastName} of {student1.Campus} campus has a Student ID of {student1.EnrollStudent()}");
+            Console.WriteLine("\nCreating new person record...");
+            //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine($"\nAdding new student record to {student1.Campus} campus...");
+            //-- https://stackoverflow.com/questions/11512821/how-to-stop-c-sharp-console-applications-from-closing-automatically
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine($"\n{student1.FirstName} {student1.LastName} of {student1.Campus} campus has a Student ID of {student1.EnrollStudent()}");
+            Console.WriteLine("Press any key to return to Main Menu");
+            Console.ReadKey();
+            return;
         }
     }
 }
