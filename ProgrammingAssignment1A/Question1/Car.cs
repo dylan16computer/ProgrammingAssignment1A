@@ -8,14 +8,14 @@ namespace Question1
 {
     class Car
     {
-        string colour;
+        string colour; //declaring private object properties
         string make;
         string gearbox;
-        public string GetColour()
+        public string GetColour() //creating get and set methods for the instantiated object. string return type for returning a string, void type for returning nothing
         {
-            return colour;
+            return colour; //returning instance's property
         }
-        public void SetColour(string col)
+        public void SetColour(string col) //passing colour property value from main program
         {
             colour = col;
         }

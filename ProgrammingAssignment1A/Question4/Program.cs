@@ -10,8 +10,8 @@ namespace Question4
     {
         public static void Main()
         {
-            int i = -1;
-            var personList = new List<Person>();
+            int i = -1; //declaring i as a negative integer index
+            var personList = new List<Person>(); //instantiating list object for Person object
             string decide = "y";
             while (decide == "y")
             {

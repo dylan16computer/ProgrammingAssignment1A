@@ -24,7 +24,7 @@ namespace MainMenu
                         Console.Clear();
                         Console.WriteLine("--- Main Menu ---\n\nType 1, 3, 4 or 5 for the corresponding program number: ");
                         programNum = int.Parse(Console.ReadLine());
-                        if (int.TryParse(programNum, out int check))
+                        //if (int.TryParse(programNum, out int check))
                             switch (programNum)
                             {
                                 case 1:

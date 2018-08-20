@@ -8,8 +8,8 @@ namespace Question3
 {
     class Car
     {
-        public string Colour { get; set; }
-        public string Make { get; set; }
+        public string Colour { get; set; } //created auto-implemented properties - private properties created in runtime
+        public string Make { get; set; } //auto-implemented properties set and return property values without additional code
         public string Gearbox { get; set; }
     }
 }
