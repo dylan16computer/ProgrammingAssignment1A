@@ -17,10 +17,9 @@ namespace Question3
             car1.Make = Console.ReadLine();
             Console.WriteLine("Enter your gearbox type: ");
             car1.Gearbox = Console.ReadLine();
-            Console.WriteLine($"Your car colour is a {car1.Colour} {car1.Make} with a {car1.Gearbox} transmission"); //caling the getter to return the value of each property
-            Console.WriteLine("Press any key to return to Main Menu");
+            Console.WriteLine($"\nYour car colour is a {car1.Colour} {car1.Make} with a {car1.Gearbox} transmission"); //caling the getter to return the value of each property
+            Console.WriteLine("\nPress any key to exit");
             Console.ReadKey();
-            return;
         }
     }
 }

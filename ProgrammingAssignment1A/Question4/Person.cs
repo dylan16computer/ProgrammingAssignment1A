@@ -8,7 +8,7 @@ namespace Question4
 {
     public class Person
     {
-        public string FirstName { get; set; } //properties using getters and setters
+        public string FirstName { get; set; } //auto-implemented properties
         public string LastName { get; set; }
         public int YearOfBirth { get; set; }
         public string GetFullName()
