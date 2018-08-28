@@ -18,8 +18,8 @@ namespace Question5
             Console.WriteLine("Enter campus: ");
             string campus = Console.ReadLine();
             Student student1 = new Student(firstName, lastName, campus);
-            Console.WriteLine($"\nCreating new person record...\nAdding new student record to {student1.Campus} campus...\n{student1.FirstName} {student1.LastName} of " +
-            $"{student1.Campus} campus has a Student ID of {student1.EnrollStudent()}");
+            Console.WriteLine($"\nCreating new person record...\n\nAdding new student record to {student1.Campus} campus...\n\n{student1.FirstName} " +
+            $"{student1.LastName} of " + $"{student1.Campus} campus has a Student ID of {student1.EnrollStudent()}");
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
