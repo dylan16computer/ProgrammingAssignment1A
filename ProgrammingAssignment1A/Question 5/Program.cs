@@ -17,7 +17,7 @@ namespace Question5
             string lastName = Console.ReadLine();
             Console.WriteLine("Enter campus: ");
             string campus = Console.ReadLine();
-            Student student1 = new Student(firstName, lastName, campus);
+            Student student1 = new Student(firstName, lastName, campus); //passing user input variables to constructor
             Console.WriteLine($"\nCreating new person record...\n\nAdding new student record to {student1.Campus} campus...\n\n{student1.FirstName} " +
             $"{student1.LastName} of " + $"{student1.Campus} campus has a Student ID of {student1.EnrollStudent()}");
             Console.WriteLine("Press any key to exit");
