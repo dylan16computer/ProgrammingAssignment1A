@@ -8,18 +8,19 @@ namespace Question1
 {
     public class ProgramQ1
     {
-        public static void Main()
+        public static void Main(string[] args)
         {
-            Car car1 = new Car(); //instatiating a new instance
-            Console.WriteLine("Enter your car colour: ");
+            Car car1 = new Car(); //creating a new instance of the Car object
+            Console.WriteLine("Enter your car colour: "); //printing to the console
             car1.SetColour(Console.ReadLine()); //obtaining user input for properties
             Console.WriteLine("Enter your car make: ");
             car1.SetMake(Console.ReadLine());
             Console.WriteLine("Enter your gearbox type: ");
             car1.SetGearbox(Console.ReadLine());
-            Console.WriteLine($"Your car colour is a {car1.GetColour()} {car1.GetMake()} with a {car1.GetGearbox()} transmission"); //calling get methods to print instantiated instance's properties
+            //the below code is calling get methods to print car1's properties
+            Console.WriteLine($"\nYour car colour is a {car1.GetColour()} {car1.GetMake()} with a {car1.GetGearbox()} transmission");
             Console.WriteLine("\nPress any key to exit");
-            Console.ReadKey();
+            Console.ReadKey(); //waits for key input
         }
     }
 }

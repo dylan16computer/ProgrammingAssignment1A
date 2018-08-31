@@ -13,9 +13,9 @@ namespace Question1
         string gearbox;
         public string GetColour() //creating get and set methods for the instantiated object. string return type for returning a string, void type for returning nothing
         {
-            return colour; //returning instance's property
+            return colour; //returning instance's property to the main program
         }
-        public void SetColour(string col) //passing colour property value from main program
+        public void SetColour(string col) //passing iser input colour property value from main program to the method
         {
             colour = col;
         }

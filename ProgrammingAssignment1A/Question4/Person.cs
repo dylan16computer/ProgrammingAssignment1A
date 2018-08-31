@@ -13,7 +13,7 @@ namespace Question4
         public int YearOfBirth { get; set; }
         public string GetFullName()
         {
-            return FirstName + " " + LastName; //returning user's first and last name
+            return $"{FirstName} {LastName}"; //returning user's first and last name
         }
         public int GetAge()
         {
@@ -21,8 +21,8 @@ namespace Question4
         }
         public Person(string firstName, string lastName)
         {
-            FirstName = firstName; //setting first name private property to firstName user input
-            LastName = lastName; //setting last name private property to lastName user input
+            FirstName = firstName; //setting first name private property to firstName user input value via auto-implemented properties
+            LastName = lastName; //setting last name private property to lastName user input value via auto-implemented properties
         }
     }
 }
