@@ -15,14 +15,14 @@ namespace Question5
         {
             Random randint = new Random();
             //-- https://stackoverflow.com/questions/3975290/produce-a-random-number-in-a-range-using-c-sharp --//
-            StudentID = randint.Next(0000, 9999);
-            return StudentID;
+            StudentID = randint.Next(0000, 9999); //passing the random integer to the StudentID setter
+            return StudentID; //returning StudentID back to main program
         }
         public Student(string firstName, string lastName, string campus) : base(firstName, lastName) //constructor inherits Person class, referred to as base
         {
-            FirstName = firstName; //passing the values of the variables to the setters.
+            FirstName = firstName; //passing the values of firstName and lastName to the setters of the Person class
             LastName = lastName;
-            Campus = campus;
+            Campus = campus; //passing the value of campus to the setter of the Student class
         }
     }
 }

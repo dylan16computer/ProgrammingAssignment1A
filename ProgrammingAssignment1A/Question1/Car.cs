@@ -15,7 +15,7 @@ namespace Question1
         {
             return colour; //returning instance's property to the main program
         }
-        public void SetColour(string col) //passing iser input colour property value from main program to the method
+        public void SetColour(string col) //passing user input colour property value from main program to the method
         {
             colour = col;
         }

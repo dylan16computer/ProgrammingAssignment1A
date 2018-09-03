@@ -18,7 +18,7 @@ namespace Question3
             Console.WriteLine("Enter your gearbox type: ");
             car1.Gearbox = Console.ReadLine();
             //below code is caling the getter to return the value of each property and print to the console
-            Console.WriteLine($"\nYour car colour is a {car1.Colour} {car1.Make} with a {car1.Gearbox} transmission");
+            Console.WriteLine($"\nYour car is a {car1.Colour} {car1.Make} with a {car1.Gearbox} transmission");
             Console.WriteLine("\nPress any key to exit");
             Console.ReadKey(); //waits for key press
         }
